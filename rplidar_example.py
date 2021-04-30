@@ -1,6 +1,7 @@
 from rplidar import RPLidar
 import time
-lidar = RPLidar('/dev/ttyUSB0',256000)
+# Set Correct Com/USB port  Windows :  COM1,COM3,COM3, ... or Raspberry Pi Linux :  /dev/ttyUSB0, /dev/ttyUSB1, ....
+lidar = RPLidar('COM3',256000)
 
 info = lidar.get_info()
 print(info)
