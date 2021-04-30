@@ -9,6 +9,7 @@ print ("starting spinning .......\n")
 time.sleep(5)
 print ("scanning started")
 
+
 try:
     for scan in lidar.iter_scans():
         for (_, angle, distance) in scan:
@@ -25,6 +26,9 @@ try:
                 print ("Right")
                 print ("\n")
 
+
+except KeyboardInterrupt:
+    print('Stoping.')
 
 except KeyboardInterrupt:
     print('Stoping.')
